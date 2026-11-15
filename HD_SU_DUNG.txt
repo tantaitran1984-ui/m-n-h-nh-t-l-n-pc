@@ -35,7 +35,9 @@ Lưu ý: gói miễn phí của Render có thể tạm dừng dịch vụ khi kh
   - Hệ thống sẽ tạo một **Mã kết nối gồm 6 ký tự in hoa, in thường và số lộn xộn** (Ví dụ: `aB7xK9`, `mP4zQ1`).
   - Có nút **"Đổi mã mới"** để mỗi lần đổi một mã ngẫu nhiên mới bất kỳ lúc nào bạn muốn.
   - Có nút **"Sao chép mã"**.
-  - Bấm nút to **"Bắt đầu Chiếu màn hình"**: Chọn chia sẻ toàn màn hình hoặc cửa sổ/ứng dụng để bắt đầu phát sóng trực tiếp.
+  - Trình duyệt phải hỗ trợ API chia sẻ màn hình và được mở qua HTTPS.
+  - **Android Chrome không hỗ trợ chia sẻ toàn màn hình từ trang web.** Dùng ứng dụng Android native trong thư mục `android` để tạo mã và phát màn hình; xem `android/README.md`.
+  - Nếu trình duyệt hỗ trợ, bấm **"Bắt đầu Chiếu màn hình"** rồi chọn chia sẻ toàn màn hình.
   - Trạng thái hiển thị đèn xanh: *"Đang phát sóng trực tiếp..."*.
 
 ---
