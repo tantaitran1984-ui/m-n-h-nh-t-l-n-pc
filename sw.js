@@ -1,5 +1,5 @@
 // Service Worker for Screen Mirror Pro PWA
-const CACHE_NAME = 'screen-mirror-v1';
+const CACHE_NAME = 'screen-mirror-v2';
 const ASSETS = [
   './',
   './index.html',

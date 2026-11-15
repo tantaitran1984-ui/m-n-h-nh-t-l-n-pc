@@ -12,7 +12,7 @@ Lưu ý: gói miễn phí của Render có thể tạm dừng dịch vụ khi kh
 ## 1. Cách khởi động ứng dụng (1-Click)
 - Nhấp đúp vào file `start_app.bat`.
 - Ứng dụng sẽ tự động mở trên trình duyệt tại địa chỉ: `http://localhost:8080`.
-- (Nếu dùng điện thoại thật kết nối cùng mạng WiFi, mở trình duyệt trên điện thoại và truy cập địa chỉ IP máy tính hiển thị trên màn hình, ví dụ: `http://192.168.123.14:8080`). Hoặc bạn có thể mở 2 tab trình duyệt trên máy tính để thử nghiệm ngay lập tức!
+- Có thể mở `http://localhost:8080` trên PC để thử giao diện. Chia sẻ màn hình từ điện thoại cần HTTPS; để dùng thật, hãy triển khai lên Render và mở link HTTPS đó trên cả điện thoại lẫn PC.
 
 ---
 

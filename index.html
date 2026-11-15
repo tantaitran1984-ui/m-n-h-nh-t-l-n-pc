@@ -215,7 +215,7 @@
         <video id="phoneLocalPreview" autoplay playsinline muted style="display: none; width: 100%; max-height: 200px; border-radius: 12px; margin-top: 14px; object-fit: contain; background: #000;"></video>
 
         <div id="networkIpHint" class="network-ip-hint">
-          📱 <strong>Mở trên trình duyệt điện thoại:</strong> Kết nối cùng WiFi và truy cập địa chỉ IP của máy tính để chiếu.
+          📱 <strong>Để chiếu màn hình điện thoại:</strong> Mở ứng dụng qua HTTPS (ví dụ link Render). Link IP nội bộ dùng HTTP có thể không được trình duyệt cho phép chia sẻ màn hình.
         </div>
       </div>
     </section>
@@ -297,6 +297,9 @@
           <!-- KHUNG MÀN HÌNH ĐIỆN THOẠI (PHONE FRAME) -->
           <div id="phoneViewportFrame" class="phone-viewport-frame">
             <div class="phone-notch"></div>
+            <div id="mirrorStreamPlaceholder" class="mirror-stream-placeholder">
+              Đang chờ điện thoại chia sẻ màn hình...
+            </div>
             <div id="cameraFlashOverlay" class="camera-flash-overlay"></div>
 
             <video id="remoteScreenVideo" class="phone-video-stream" autoplay playsinline></video>
