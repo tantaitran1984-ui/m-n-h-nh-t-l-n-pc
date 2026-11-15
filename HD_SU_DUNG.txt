@@ -4,7 +4,7 @@
 1. Tạo một repository GitHub mới và tải toàn bộ mã nguồn của ứng dụng lên repository đó (bao gồm file `render.yaml`).
 2. Trên Render, chọn **New + → Blueprint**, kết nối tài khoản GitHub và chọn repository vừa tải lên.
 3. Render sẽ đọc `render.yaml` để tạo dịch vụ Node.js. Sau khi triển khai thành công, mở địa chỉ `https://...onrender.com` mà Render cung cấp.
-4. Mở địa chỉ HTTPS đó trên điện thoại và PC. Chọn **Cài trên ĐT** hoặc **Cài trên PC**; nếu trình duyệt không hiện hộp thoại cài đặt, làm theo hướng dẫn trong cửa sổ cài đặt.
+4. Mở địa chỉ HTTPS trên thiết bị muốn cài, bấm **Cài đặt**, chọn **Điện thoại** hoặc **Máy tính**, rồi làm theo hướng dẫn tương ứng.
 5. Mỗi lần cập nhật mã nguồn, đẩy commit mới lên GitHub; Render sẽ tự triển khai lại nếu bật tự động triển khai.
 
 Lưu ý: gói miễn phí của Render có thể tạm dừng dịch vụ khi không có người truy cập. Dữ liệu người dùng lưu trên ổ đĩa mặc định của dịch vụ có thể mất khi dịch vụ được tạo lại.

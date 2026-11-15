@@ -119,11 +119,8 @@
       </div>
 
       <div class="header-user-panel">
-        <button id="btnInstallPhoneApp" class="btn-install-app" title="Cài đặt ứng dụng trên điện thoại">
-          <span>📱 Cài trên ĐT</span>
-        </button>
-        <button id="btnInstallPCApp" class="btn-install-app" title="Cài đặt ứng dụng trên máy tính">
-          <span>💻 Cài trên PC</span>
+        <button id="btnInstallApp" class="btn-install-app" title="Chọn thiết bị để cài đặt ứng dụng">
+          <span>📥 Cài đặt</span>
         </button>
         <div class="user-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
@@ -326,42 +323,48 @@
       </div>
 
       <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 16px;">
-        Ứng dụng hỗ trợ công nghệ PWA (Progressive Web App) giúp chạy mượt mà như app gốc không cần cài đặt phức tạp.
+        Chọn loại thiết bị bạn muốn cài đặt. Hãy mở ứng dụng trên chính thiết bị đó để hoàn tất cài đặt.
       </p>
 
-      <!-- HƯỚNG DẪN PC -->
-      <div class="guide-step-box">
-        <div class="guide-step-title">
-          💻 Cài đặt trên Máy tính (PC / Laptop)
+      <div id="installTargetPicker" class="install-target-picker">
+        <button type="button" class="install-target-choice" data-install-target="phone">
+          <span>📱 Điện thoại</span>
+          <small>Android hoặc iPhone</small>
+        </button>
+        <button type="button" class="install-target-choice" data-install-target="pc">
+          <span>💻 Máy tính</span>
+          <small>Windows, macOS hoặc Linux</small>
+        </button>
+      </div>
+
+      <div id="installGuidePhone" class="install-guide-content" hidden>
+        <div class="guide-step-box">
+          <div class="guide-step-title">🤖 Điện thoại Android</div>
+          <div class="guide-step-desc">
+            Mở link bằng Chrome, bấm Menu (⋮), chọn <strong>Cài đặt ứng dụng</strong> hoặc <strong>Thêm vào màn hình chính</strong>.
+          </div>
         </div>
-        <div class="guide-step-desc">
-          Bấm nút <strong>"Cài đặt ngay"</strong> bên dưới. Hoặc trên thanh địa chỉ trình duyệt Chrome / Edge, nhấn vào biểu tượng <strong>Cài đặt (Install App ⊕)</strong> ở góc phải thanh URL để thêm icon ra màn hình Desktop.
+        <div class="guide-step-box">
+          <div class="guide-step-title">🍎 iPhone hoặc iPad</div>
+          <div class="guide-step-desc">
+            Mở link bằng Safari, bấm nút <strong>Chia sẻ</strong>, rồi chọn <strong>Thêm vào màn hình chính</strong>.
+          </div>
         </div>
       </div>
 
-      <!-- HƯỚNG DẪN ANDROID -->
-      <div class="guide-step-box">
-        <div class="guide-step-title">
-          🤖 Cài đặt trên Điện thoại Android
-        </div>
-        <div class="guide-step-desc">
-          Mở link trên trình duyệt Chrome, bấm vào biểu tượng <strong>Menu (3 dấu chấm)</strong> ở góc trên bên phải -> Chọn <strong>"Cài đặt ứng dụng"</strong> hoặc <strong>"Thêm vào Màn hình chính"</strong>.
-        </div>
-      </div>
-
-      <!-- HƯỚNG DẪN IPHONE -->
-      <div class="guide-step-box">
-        <div class="guide-step-title">
-          🍎 Cài đặt trên iPhone (iOS Safari)
-        </div>
-        <div class="guide-step-desc">
-          Mở link trên trình duyệt Safari, bấm nút <strong>Chia sẻ (biểu tượng ô vuông mũi tên lên ⎋)</strong> ở thanh dưới cùng -> Chọn <strong>"Thêm vào MH chính" (Add to Home Screen)</strong>.
+      <div id="installGuidePC" class="install-guide-content" hidden>
+        <div class="guide-step-box">
+          <div class="guide-step-title">💻 Máy tính Windows, macOS hoặc Linux</div>
+          <div class="guide-step-desc">
+            Bấm <strong>Cài đặt ngay</strong> bên dưới nếu trình duyệt hỗ trợ. Hoặc trong Chrome/Edge, chọn biểu tượng cài đặt ở thanh địa chỉ.
+          </div>
         </div>
       </div>
 
       <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 16px;">
-        <button id="btnTriggerNativeInstall" class="btn-install-app" style="padding: 10px 20px; font-size: 14px;">
-          🚀 Cài đặt ngay
+        <button id="btnBackInstallTarget" class="btn-back-mode" type="button" hidden>← Chọn thiết bị khác</button>
+        <button id="btnTriggerNativeInstall" class="btn-install-app" style="padding: 10px 20px; font-size: 14px;" hidden>
+          🚀 Cài đặt ngay trên thiết bị này
         </button>
       </div>
     </div>
