@@ -70,7 +70,13 @@ const Auth = {
     });
 
     if (logoutBtn) {
-      logoutBtn.addEventListener('click', () => this.logout());
+      logoutBtn.addEventListener('click', () => {
+        if (this.currentUser) {
+          this.logout();
+        } else {
+          this.showLoginModal();
+        }
+      });
     }
   },
 
@@ -190,6 +196,8 @@ const Auth = {
     document.getElementById('loginOverlay').classList.add('hidden');
     const nameEl = document.getElementById('topBarUserName');
     if (nameEl) nameEl.innerText = user.name || user.username;
+    const authButton = document.getElementById('btnLogoutTop');
+    if (authButton) authButton.textContent = 'Đăng xuất';
 
     if (window.MirrorApp) {
       MirrorApp.switchView('viewDeviceSelector');
@@ -200,6 +208,8 @@ const Auth = {
     document.getElementById('loginOverlay').classList.remove('hidden');
     document.getElementById('loginView').style.display = 'block';
     document.getElementById('registerView').style.display = 'none';
+    const authButton = document.getElementById('btnLogoutTop');
+    if (authButton) authButton.textContent = 'Đăng nhập';
   },
 
   logout() {
