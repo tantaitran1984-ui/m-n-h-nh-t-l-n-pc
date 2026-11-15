@@ -1,11 +1,11 @@
 // Service Worker for Screen Mirror Pro PWA
-const CACHE_NAME = 'screen-mirror-v2';
+const CACHE_NAME = 'screen-mirror-v3';
 const ASSETS = [
   './',
   './index.html',
   './manifest.json',
-  './css/login.css',
-  './css/mirror.css',
+  './css/login.css?v=3',
+  './css/mirror.css?v=3',
   './js/auth.js',
   './js/mirror.js',
   './assets/images/app-icon.svg'
