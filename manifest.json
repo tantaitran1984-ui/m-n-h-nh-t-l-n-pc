@@ -1,0 +1,18 @@
+{
+  "name": "Screen Mirror Pro - Chiếu Màn Hình ĐT lên PC",
+  "short_name": "ScreenMirror",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#070d17",
+  "theme_color": "#00d2ff",
+  "description": "Ứng dụng chiếu màn hình điện thoại lên máy tính PC, hỗ trợ quay video và chụp ảnh màn hình chất lượng cao.",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/images/app-icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

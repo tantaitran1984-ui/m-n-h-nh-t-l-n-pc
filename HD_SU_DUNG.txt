@@ -1,0 +1,62 @@
+# HƯỚNG DẪN SỬ DỤNG APP CHIẾU MÀN HÌNH ĐIỆN THOẠI LÊN PC (SCREEN MIRROR PRO)
+
+## 0. Đưa ứng dụng lên Render qua GitHub
+1. Tạo một repository GitHub mới và tải toàn bộ mã nguồn của ứng dụng lên repository đó (bao gồm file `render.yaml`).
+2. Trên Render, chọn **New + → Blueprint**, kết nối tài khoản GitHub và chọn repository vừa tải lên.
+3. Render sẽ đọc `render.yaml` để tạo dịch vụ Node.js. Sau khi triển khai thành công, mở địa chỉ `https://...onrender.com` mà Render cung cấp.
+4. Mở địa chỉ HTTPS đó trên điện thoại và PC. Chọn **Cài trên ĐT** hoặc **Cài trên PC**; nếu trình duyệt không hiện hộp thoại cài đặt, làm theo hướng dẫn trong cửa sổ cài đặt.
+5. Mỗi lần cập nhật mã nguồn, đẩy commit mới lên GitHub; Render sẽ tự triển khai lại nếu bật tự động triển khai.
+
+Lưu ý: gói miễn phí của Render có thể tạm dừng dịch vụ khi không có người truy cập. Dữ liệu người dùng lưu trên ổ đĩa mặc định của dịch vụ có thể mất khi dịch vụ được tạo lại.
+
+## 1. Cách khởi động ứng dụng (1-Click)
+- Nhấp đúp vào file `start_app.bat`.
+- Ứng dụng sẽ tự động mở trên trình duyệt tại địa chỉ: `http://localhost:8080`.
+- (Nếu dùng điện thoại thật kết nối cùng mạng WiFi, mở trình duyệt trên điện thoại và truy cập địa chỉ IP máy tính hiển thị trên màn hình, ví dụ: `http://192.168.123.14:8080`). Hoặc bạn có thể mở 2 tab trình duyệt trên máy tính để thử nghiệm ngay lập tức!
+
+---
+
+## 2. Các tính năng và quy trình sử dụng:
+
+### ✅ Bước 1: Giao diện Đăng nhập cũ (Neon Cyber)
+- Sử dụng giao diện Dark Neon viền xanh cyan phát sáng quen thuộc.
+- Hỗ trợ Đăng ký & Đăng nhập bằng tên tài khoản và mật khẩu (có nút bật/tắt hiển thị mật khẩu).
+- Đăng nhập xong sẽ lưu phiên làm việc để các lần sau không cần phải đăng nhập lại.
+
+### ✅ Bước 2: Chọn vai trò thiết bị (2 chỗ ghi rõ ràng)
+Ứng dụng sẽ hiện 2 lựa chọn lớn:
+1. 📱 **Thiết bị Điện thoại (TB ĐT)**: Dành cho thiết bị phát/chiếu màn hình.
+2. 💻 **Thiết bị Máy tính (TB PC)**: Dành cho máy tính nhận hình ảnh, chụp ảnh và quay phim.
+
+---
+
+### ✅ Bước 3: Thao tác trên Thiết bị Điện thoại (TB ĐT)
+- Khi bấm chọn **Thiết bị Điện thoại**:
+  - Hệ thống sẽ tạo một **Mã kết nối gồm 6 ký tự in hoa, in thường và số lộn xộn** (Ví dụ: `aB7xK9`, `mP4zQ1`).
+  - Có nút **"Đổi mã mới"** để mỗi lần đổi một mã ngẫu nhiên mới bất kỳ lúc nào bạn muốn.
+  - Có nút **"Sao chép mã"**.
+  - Bấm nút to **"Bắt đầu Chiếu màn hình"**: Chọn chia sẻ toàn màn hình hoặc cửa sổ/ứng dụng để bắt đầu phát sóng trực tiếp.
+  - Trạng thái hiển thị đèn xanh: *"Đang phát sóng trực tiếp..."*.
+
+---
+
+### ✅ Bước 4: Thao tác trên Thiết bị Máy tính (TB PC)
+- Khi bấm chọn **Thiết bị Máy tính (PC)**:
+  - Xuất hiện ô lớn để bạn **nhập mã 6 ký tự** đang hiển thị trên điện thoại.
+  - Bấm nút **"Kết nối & Xem màn hình"**.
+  - Màn hình điện thoại sẽ được truyền trực tiếp với khung hình smartphone cao cấp và độ sắc nét cao!
+
+---
+
+### ✅ Bước 5: Nút Quay & Chụp màn hình chuyên nghiệp
+Trên thanh công cụ điều khiển của máy tính có đầy đủ các nút:
+1. 📸 **Nút Chụp Ảnh (Snapshot)**:
+   - Bấm vào sẽ có hiệu ứng chớp sáng máy ảnh (Flash).
+   - Tự động chụp lại khung hình đang chiếu ở độ phân giải gốc và **lưu file ảnh PNG về máy tính ngay lập tức**!
+2. 🎥 **Nút Quay Video (Screen Record)**:
+   - Bấm vào để bắt đầu quay video màn hình điện thoại.
+   - Nút sẽ nhấp nháy đèn đỏ `REC` kèm đồng hồ đếm thời gian thực `00:01`, `00:02`...
+   - Bấm nút lần nữa để dừng quay -> Hệ thống sẽ **tự động lưu và tải file video WebM về máy tính của bạn**!
+3. 🔄 **Nút Xoay màn hình**: Chuyển đổi linh hoạt giữa màn hình dọc (9:16) và màn hình ngang (16:9).
+4. ⛶ **Nút Toàn màn hình (Fullscreen)**: Phóng to toàn bộ màn hình máy tính.
+5. ❌ **Nút Ngắt kết nối**: Dừng phiên chiếu màn hình.
